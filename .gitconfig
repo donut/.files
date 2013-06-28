@@ -1,0 +1,24 @@
+[gui]
+	recentrepo = /Users/donut/Sites/git_test
+[user]
+	email = zotobi@gmail.com
+	name = Donovan Mueller
+[core]
+	editor = vim
+	excludesfile = /Users/donovan/.gitignore_global
+[color]
+	status = auto
+	branch = auto
+	interactive = auto
+	diff = auto
+[github]
+	user = donut
+	token = 22267872c136b61eedafdc635d80e8a4
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[ghi]
+	token = 97875e7b9db62312ea19c43a5e39dd9c07c1f3fc
