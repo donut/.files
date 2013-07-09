@@ -1,6 +1,6 @@
 HISTSIZE=10000
 
-PATH=~/Applications/bin:~/Applications/bin/homebrew/bin:~/Applications/bin/homebrew/sbin:$PATH
+PATH=$PATH:~/Applications/bin
 
 ### Colors ###
 Black="$(tput setaf 0)"
@@ -30,18 +30,18 @@ LightCyan="$(tput bold ; tput setaf 6)"
 NC="$(tput sgr0)" # No Color
 
 # Git Tools
-source ~/Applications/bin/homebrew/etc/bash_completion.d/git-completion.bash
-source ~/Applications/bin/homebrew/etc/bash_completion.d/git-prompt.sh
+if [ -f ~/.files/git-completion.bash ]; then
+  source ~/.files/git-completion.bash
+fi
 
 ### Prompts ###
-
-# With git installed:
-export GIT_PS1_SHOWDIRTYSTATE=1
-export GIT_PS1_SHOWSTASHSTATE=1
-export GIT_PS1_SHOWUNTRACKEDFILES=1
-export PS1='\[$LightRed\]\u\[$NC\][\[$LightBlue\]\w\[$NC\]]$(__git_ps1 " (%s)")\n\[$Black\]\$\[$NC\] '
-
-# Without git installed:
-# export PS1='\[$LightRed\]\u\[$NC\][\[$LightBlue\]\w\[$NC\]]\n\[$Black\]\$\[$NC\] '
-
-alias mpear="/Applications/MAMP/bin/php/php5.2.17/bin/pear"
+if [ -f ~/.files/git-prompt.sh ]; then
+  source ~/.files/git-prompt.sh
+  export GIT_PS1_SHOWDIRTYSTATE=1
+  export GIT_PS1_SHOWSTASHSTATE=1
+  export GIT_PS1_SHOWUNTRACKEDFILES=1
+  export PS1='\[$LightRed\]\u\[$NC\][\[$LightBlue\]\w\[$NC\]]$(__git_ps1 " (%s)")\n\[$Black\]\$\[$NC\] '
+else
+  # Without git installed:
+  export PS1='\[$LightRed\]\u\[$NC\][\[$LightBlue\]\w\[$NC\]]\n\[$Black\]\$\[$NC\] '
+fi
