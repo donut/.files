@@ -1,6 +1,6 @@
 HISTSIZE=10000
 
-PATH=$PATH:~/Applications/bin
+export PATH=$PATH:~/Applications/Bin:~/Applications/Homebrew/bin
 
 ### Colors ###
 Black="$(tput setaf 0)"

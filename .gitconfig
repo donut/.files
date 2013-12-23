@@ -11,6 +11,7 @@
 	branch = auto
 	interactive = auto
 	diff = auto
+	ui = auto
 [github]
 	user = donut
 	token = 22267872c136b61eedafdc635d80e8a4
@@ -22,3 +23,5 @@
 	trustExitCode = true
 [ghi]
 	token = 97875e7b9db62312ea19c43a5e39dd9c07c1f3fc
+[push]
+	default = simple
