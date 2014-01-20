@@ -2,6 +2,9 @@ HISTSIZE=10000
 
 export PATH=$PATH:~/Applications/Bin:~/Applications/Homebrew/bin
 
+# Enable VIM mode
+set -o vi
+
 ### Colors ###
 Black="$(tput setaf 0)"
 BlackBG="$(tput setab 0)"
