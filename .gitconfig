@@ -14,7 +14,6 @@
 	ui = auto
 [github]
 	user = donut
-	token = 22267872c136b61eedafdc635d80e8a4
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 
