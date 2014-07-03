@@ -1,5 +1,6 @@
+# Colors: http://www.calmar.ws/vim/256-xterm-24bit-rgb-color-chart.html
 PROMPT=$'
-%{$fg[blue]%}%/%{$reset_color%} $(git_prompt_info)$(bzr_prompt_info)%{$fg[white]%}[%n@%M]%{$reset_color%} %{$fg[white]%}[%T]%{$reset_color%}
+%{$fg[blue]%}%/%{$reset_color%} $(git_prompt_info)$(bzr_prompt_info)%{$fg[white]%}[%n@%{$FG[008]%}%M%{$fg[white]%}]%{$reset_color%} %{$fg[white]%}[%T]%{$reset_color%}
 %{$fg_bold[black]%}>%{$reset_color%} '
 
 PROMPT2="%{$fg_blod[black]%}%_> %{$reset_color%}"
