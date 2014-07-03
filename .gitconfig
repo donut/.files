@@ -20,7 +20,5 @@
 [mergetool "sourcetree"]
 	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
-[ghi]
-	token = 97875e7b9db62312ea19c43a5e39dd9c07c1f3fc
 [push]
 	default = simple
