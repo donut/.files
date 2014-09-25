@@ -5,10 +5,10 @@ ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="amuse"
+#ZSH_THEME="amuse"
 DEFAULT_USER=donovan
 # Enable VIM mode on the command line
-#bindkey -v
+bindkey -v
 
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
@@ -51,11 +51,14 @@ DEFAULT_USER=donovan
 plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
+source $HOME/.files/frisk.zsh-theme
 
 # User configuration
 
 export PATH=$HOME/bin:/usr/local/bin:$HOME/Applications/Bin:$HOME/Applications/Homebrew/bin:$PATH
 # export MANPATH="/usr/local/man:$MANPATH"
+
+alias drush='/Applications/MAMP/bin/php/php5.3.6/bin/php /Users/donovan/Applications/Homebrew/Cellar/drush/6.2.0/libexec/drush.php'
 
 # # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
@@ -67,6 +70,9 @@ export PATH=$HOME/bin:/usr/local/bin:$HOME/Applications/Bin:$HOME/Applications/H
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
+export HOMEBREW_GITHUB_API_TOKEN='dcf0b75b8cf58b42d0f822238e3920605e743744'
+
 # ssh
 export SSH_KEY_PATH="~/.ssh/rsa_id"
 
+archey -c
