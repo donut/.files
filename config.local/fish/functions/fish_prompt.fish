@@ -13,6 +13,22 @@ function tbytes -d 'calculates the total size of the files in the current direct
 end
 
 function fish_prompt
+  # Configure __fish_git_prompt
+  set -g __fish_git_prompt_showdirtystate true
+  set -g __fish_git_prompt_showuntrackedfiles true
+  set -g __fish_git_prompt_showstashstate true
+  set -g __fish_git_prompt_color green
+  set -g __fish_git_prompt_color_flags red
+
+  if not set -q __fish_prompt_char
+    switch (id -u)
+      case 0
+	set -g __fish_prompt_char '↪#'
+      case '*'
+	set -g __fish_prompt_char '↪ '
+    end
+  end
+
   set_color blue
   printf '%s' (pwd|sed "s=$HOME=~=")
 
@@ -32,7 +48,7 @@ function fish_prompt
   if test $VIRTUAL_ENV
       printf "(%s) " (set_color blue)(basename $VIRTUAL_ENV)(set_color normal)
   end
-  printf '↪  '
+  printf '%s ' $__fish_prompt_char
   set_color normal
 end
 
