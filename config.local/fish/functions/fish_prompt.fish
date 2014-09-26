@@ -13,27 +13,21 @@ function tbytes -d 'calculates the total size of the files in the current direct
 end
 
 function fish_prompt
-  set_color yellow
-  printf '%s' (whoami)
-  set_color normal
-  #printf ' at '
-
-  #set_color magenta
-  #printf '%s' (hostname|cut -d . -f 1)
-  #set_color normal
-  printf ' in '
-
-  set_color $fish_color_cwd
-  #printf '%s ' (prompt_pwd)
-  #printf '%s ' (__fish_pwd)
-  echo -n (pwd|sed "s=$HOME=~=")
-  #set_color blue
-  #printf '%s' (tbytes)
   set_color blue
+  printf '%s' (pwd|sed "s=$HOME=~=")
+
+  set_color green
   printf '%s' (__fish_git_prompt)
-  set_color normal
+
+  #set_color 919191
+  #printf ' [%s' (whoami)
+  #set_color 797979
+  #printf '@%s' (hostname|cut -d . -f 1)
+  #set_color 919191
+  #printf ']'
 
   # Line 2
+  set_color -b normal
   echo
   if test $VIRTUAL_ENV
       printf "(%s) " (set_color blue)(basename $VIRTUAL_ENV)(set_color normal)
@@ -42,3 +36,9 @@ function fish_prompt
   set_color normal
 end
 
+function fish_right_prompt -d "Write out the right prompt"
+  set_color 5E5E5E
+  printf '%s' $status
+  set_color 919191
+  printf '@%s' (date "+%H:%M:%S")
+end
