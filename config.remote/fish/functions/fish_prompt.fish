@@ -37,8 +37,8 @@ function fish_prompt
 
   set_color 919191
   printf ' [%s' (whoami)
-  set_color 5E5E5E
-  printf '@%s' (hostname|cut -d . -f 1)
+  set_color 424242
+  printf '@%s' (hostname)
   set_color 919191
   printf ']'
 
