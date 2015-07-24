@@ -1,3 +1,5 @@
+fish_vi_mode
+
 # Path to your oh-my-fish.
 #set fish_path $HOME/.files/oh-my-fish
 
