@@ -1,8 +1,11 @@
-# Path to your oh-my-fish.
-#set fish_path $HOME/.files/oh-my-fish
+set -e fish_key_bindings
+#set -e fish_key_bindings
+fish_vi_mode
+
+# Path to your oh-my-fish.  #set fish_path $HOME/.files/oh-my-fish
 
 # Theme
-#set fish_theme yimmy
+#set fish_theme budspencer
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-fish/plugins/*)
 # Custom plugins may be added to ~/.oh-my-fish/custom/plugins/
