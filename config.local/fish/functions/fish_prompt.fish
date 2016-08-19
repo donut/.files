@@ -48,7 +48,7 @@ function fish_prompt
   if test $VIRTUAL_ENV
       printf "(%s) " (set_color blue)(basename $VIRTUAL_ENV)(set_color normal)
   end
-  printf '%s ' $__fish_prompt_char
+  printf '%s' $__fish_prompt_char
   set_color normal
 end
 
