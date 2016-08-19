@@ -1,6 +1,6 @@
-set -e fish_key_bindings
-#set -e fish_key_bindings
-fish_vi_mode
+if status --is-interactive
+	fish_vi_key_bindings
+end
 
 # Path to your oh-my-fish.  #set fish_path $HOME/.files/oh-my-fish
 

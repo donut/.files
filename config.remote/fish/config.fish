@@ -14,4 +14,7 @@
 # Load oh-my-fish configuration.
 #. $fish_path/oh-my-fish.fish
 
-set PATH /Users/donovan/Applications/Bin /Users/donovan/Applications/Homebrew/bin $PATH
+if status --is-interactive
+	fish_vi_key_bindings
+end
+
