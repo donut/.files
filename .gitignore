@@ -4,3 +4,11 @@
 # Vim
 *.swp
 *.swo
+
+# Misc. Applications
+.mono
+configstore
+gtk-2.0
+StardewValley
+robomongo
+config.*/yarn
