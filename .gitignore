@@ -11,4 +11,6 @@ configstore
 gtk-2.0
 StardewValley
 robomongo
+config.*/composer
+config.*/htop
 config.*/yarn
