@@ -1,20 +1,19 @@
+alias ls "ls -aGFh@O"
+set --global --export LSCOLORS "Exfxcxdxbxegedabagacad"
+
 if status --is-interactive
-	fish_vi_key_bindings
+  fish_vi_key_bindings
 end
 
-# Path to your oh-my-fish.  #set fish_path $HOME/.files/oh-my-fish
+set PATH ~/.npm-packages/bin (yarn global bin) ~/Applications/Bin $PATH
 
-# Theme
-#set fish_theme budspencer
+if which swiftenv > /dev/null; status --is-interactive;
+  set --global --export PATH '/Users/donovan/.swiftenv/shims' $PATH
+  source '/usr/local/Cellar/swiftenv/HEAD/bin/../libexec/../completions/swiftenv.fish'
+end
 
-# Which plugins would you like to load? (plugins can be found in ~/.oh-my-fish/plugins/*)
-# Custom plugins may be added to ~/.oh-my-fish/custom/plugins/
-# Example format: set fish_plugins autojump bundler
+test -e {$HOME}/.iterm2_shell_integration.fish ; and source {$HOME}/.iterm2_shell_integration.fish
 
-# Path to your custom folder (default path is $FISH/custom)
-#set fish_custom $HOME/.config/fish/custom
-
-# Load oh-my-fish configuration.
-#. $fish_path/oh-my-fish.fish
-
-set PATH /Users/donovan/Applications/Bin /Users/donovan/Applications/Homebrew/bin $PATH
+# OPAM configuration
+#source /Users/donovan/.opam/opam-init/init.fish > /dev/null 2> /dev/null or true
+eval (opam config env)

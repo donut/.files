@@ -23,9 +23,9 @@ function fish_prompt
   if not set -q __fish_prompt_char
     switch (id -u)
       case 0
-	set -g __fish_prompt_char '↪#'
+				set -g __fish_prompt_char '↪# '
       case '*'
-	set -g __fish_prompt_char '↪ '
+				set -g __fish_prompt_char '↪  '
     end
   end
 
@@ -53,8 +53,8 @@ function fish_prompt
 end
 
 function fish_right_prompt -d "Write out the right prompt"
-  set_color 5E5E5E
+  set_color white
   printf '%s' $status
-  set_color 919191
+  set_color brblack
   printf '@%s' (date "+%H:%M:%S")
 end

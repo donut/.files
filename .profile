@@ -48,3 +48,7 @@ else
   # Without git installed:
   export PS1='\[$LightRed\]\u\[$NC\][\[$LightBlue\]\w\[$NC\]]\n\[$Black\]\$\[$NC\] '
 fi
+
+export PATH="$HOME/.yarn/bin:$PATH"
+
+export PATH=/Users/donovan/.local/bin/luna-studio:$PATH
