@@ -1,5 +1,7 @@
-alias ls "ls -aGFh"
+# This comment triggers syntax highlighting in vim
 set --global --export LSCOLORS "Exfxcxdxbxegedabagacad"
+
+alias lsf="ls -aGFh"
 
 if status --is-interactive
   fish_vi_key_bindings
