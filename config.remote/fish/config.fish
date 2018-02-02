@@ -1,4 +1,4 @@
-alias ls "ls -aGFh@O"
+alias ls "ls -aGFh"
 set --global --export LSCOLORS "Exfxcxdxbxegedabagacad"
 
 if status --is-interactive
